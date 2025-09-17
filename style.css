@@ -2,10 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Inter", sans-serif;
 }
 
 body {
-  font-family: "Inter", sans-serif;
   background: #0b0f17;
   color: #fff;
   line-height: 1.6;
@@ -14,6 +14,9 @@ body {
 section {
   min-height: 100vh;
   min-width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+  scroll-behavior: smooth;
 }
 
 /* HOME */
@@ -46,7 +49,7 @@ section {
   position: absolute;
   top: 10px;
   right: 10px;
-  z-index: 1001; /* ícone acima do menu */
+  z-index: 1001;
 }
 
 .header {
@@ -203,8 +206,69 @@ section {
   transition: 0.2s;
 }
 
+#skills {
+  flex: 1 1 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: none;
+}
+
+#skills h1 {
+  color: #00c6ff;
+  border-bottom: 3px solid #00c6ff;
+  font-size: 2.7rem;
+  margin-bottom: 10px;
+  margin-bottom: 40px;
+}
+
+.skills-cards {
+  display: flex;
+  gap: 30px;
+}
+
+.front-end, .pacote-office, .aws, .hardware {
+  border: 2px solid rgba(255, 255, 255, 0.449);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  align-items: center;
+  width: 250px;
+  transition: 0.2s;
+}
+
+.front-end:hover {
+  transform: scale(1.03);
+  background: #152036;
+  filter: brightness(1.1);
+    box-shadow: 0px 4px 15px #00c8ff79;
+}
+
+.pacote-office:hover {
+  transform: scale(1.03);
+  background: #152036;
+  filter: brightness(1.1);
+  box-shadow: 0px 4px 15px #00c8ff79;
+}
+
+.aws:hover {
+  transform: scale(1.03);
+  background: #152036;
+  filter: brightness(1.1);
+  box-shadow: 0px 4px 15px #00c8ff79;
+}
+
+.hardware:hover {
+  transform: scale(1.03);
+  background: #152036;
+  filter: brightness(1.1);
+  box-shadow: 0px 4px 15px #00c8ff79;
+}
+
 /* PROJETOS */
 .tittle {
+  flex: 1 1 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -220,36 +284,21 @@ section {
 }
 
 .tittle p {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
-#projects {
-  min-height: 100vh;
-  background-color: #0b0f17;
+.description {
   display: flex;
-  flex-direction: column;
-  align-items: center; 
+  flex-wrap: wrap;     
   justify-content: center; 
-  padding: 60px 20px;
-  color: #fff;
-}
-
-#projects > div {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 15px;
+  gap: 30px;
   padding: 25px;
-  max-width: 900px;
-  width: 100%; 
+  color: #fff;
   text-align: left;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  margin: 0 auto;
 }
 
-#projects > div:hover {
-  transform: none;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-}
-
-#projects img {
+.description img {
   width: 100%;
   max-height: 400px;
   object-fit: cover;
@@ -258,18 +307,18 @@ section {
   transition: 0.2s; 
 }
 
-#projects img:hover {
+.description img:hover {
   transform: scale(1.02);
 }
 
-#projects h2 {
+.description h2 {
   font-size: 2rem;
   color: rgb(8, 130, 206); 
   margin-bottom: 10px;
   text-align: left;
 }
 
-#projects h6 {
+.description h6 {
   font-size: 1rem;
   font-weight: 600;
   color: rgb(8, 130, 206);
@@ -277,21 +326,21 @@ section {
   text-align: left;
 }
 
-#projects p {
+.description p {
   color: #ddd;
   line-height: 1.6;
   margin-bottom: 15px;
   text-align: left;
 }
 
-#projects .pg {
+.description .pg {
   display: flex;
   justify-content: flex-start; 
   gap: 12px;
   flex-wrap: wrap;
 }
 
-#projects .pg p {
+.description .pg p {
   background: rgba(8, 130, 206, 0.15);
   border: 1px solid rgb(8, 130, 206);
   color: rgb(8, 130, 206);
@@ -300,6 +349,24 @@ section {
   font-size: 0.9rem;
   font-weight: 500;
   transition: none;
+}
+
+.login {
+  border: 2px solid rgba(255, 255, 255, 0.449);
+  padding: 30px;
+  border-radius: 30px;
+  flex: 1 1 300px; 
+  max-width: 400px; 
+  border-radius: 20px;
+}
+
+.other {
+  border: 2px solid rgba(255, 255, 255, 0.449);
+  padding: 30px;
+  border-radius: 30px;
+  flex: 1 1 300px; 
+  max-width: 400px; 
+  border-radius: 20px;
 }
 
 .btn-projects {
@@ -327,6 +394,10 @@ section {
 #demo {
   background: linear-gradient(90deg, #00c6ff, rgb(8, 130, 206));
   color: #fff;
+}
+
+#demo:hover {
+  transform: scale(1.08);
 }
 
 #github {
@@ -362,6 +433,8 @@ section {
 
 .download p {
   font-size: 1.3rem;
+  text-align: center;
+  margin-top: 5px;
 }
 
 .download-review {
@@ -578,7 +651,6 @@ footer {
   background: linear-gradient(90deg, #0b0f12, #0f1417 70%);
   color: #d7d7d7;
   padding: 60px 20px 30px;
-  font-family: "Inter", sans-serif;
   display: flex;
   justify-content: center;   
   align-items: flex-start;   
@@ -608,6 +680,7 @@ footer {
 }
 .footer-about .footer-icons {
   display: flex;
+  justify-content: center;
   gap: 12px;
 }
 .footer-about .footer-icons a {
@@ -654,6 +727,7 @@ footer {
   flex: 1 1 200px;
 }
 .footer-contact p {
+  margin-top: 15px;
   margin-bottom: 10px;
   color: #9aa0a6;
   font-size: 15px;
