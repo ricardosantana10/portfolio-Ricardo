@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -95,8 +97,8 @@
                 <p>Página de login responsiva desenvolvida em HTML e CSS, com campos estilizados para usuário e senha, botão
                     de acesso e layout moderno para praticar conceitos de front-end.</p>
                 <h6>Desafio Técnico</h6>
-                <p>O desafio do projeto é criar uma página de login funcional e responsiva, com validação de campos,
-                    feedback visual de erros e opção de exibir ou ocultar a senha.</p>
+                <p>O desafio do projeto é criar uma página de login funcional, com validação de campos e
+                    feedback visual de erros.</p>
                 <div class="pg">
                     <p>HTML5</p>
                     <p>CSS3</p>
@@ -107,14 +109,12 @@
                         rel="external"><button id="github">Ver Código</button></a>
             </div>
             </div>
-            <div class="other">
-                <img src="imagens/photo-login.jpg" alt="photo-login">
-                <h2>Projeto Login</h2>
-                <p>Página de login responsiva desenvolvida em HTML e CSS, com campos estilizados para usuário e senha, botão
-                    de acesso e layout moderno para praticar conceitos de front-end.</p>
+            <div class="ironhouse">
+                <img src="imagens/photo-ironhouse.jpg" alt="photo-ironhouse">
+                <h2>Projeto Academia</h2>
+                <p>Site moderno para academia, desenvolvido com HTML e CSS, trazendo um design escuro e impactante que remete ao universo fitness. O projeto inclui logo personalizado, seção de treinos em cards com legendas, botão de ação chamativo e ícone de usuário fixo no cabeçalho. O layout foi pensado para transmitir disciplina, organização e motivação.</p>
                     <h6>Desafio Técnico</h6>
-                    <p>O desafio do projeto é criar uma página de login funcional e responsiva, com validação de campos,
-                        feedback visual de erros e opção de exibir ou ocultar a senha.</p>
+                    <p>O principal desafio foi criar um layout visualmente equilibrado, mantendo a identidade forte da marca. Outro ponto foi a harmonização das cores (fundo escuro + vermelho de destaque), garantindo legibilidade e contraste sem perder o estilo “academia noturna”.</p>
                 <div class="pg">
                     <p>HTML5</p>
                     <p>CSS3</p>
@@ -186,23 +186,23 @@
             <form id="form" method="post">
                 <div class="form-group">
                     <label for="iname">Nome *</label>
-                    <input type="text" name="name" id="iname" required autocomplete="on" placeholder="Seu nome">
+                    <input type="text" name="name" id="name" required autocomplete="on" placeholder="Seu nome">
                 </div>
                 <div class="form-group">
                     <label for="iemail">Email *</label>
-                    <input type="email" name="email" id="iemail" required autocomplete="on"
+                    <input type="email" name="email" id="email" required autocomplete="on"
                         placeholder="nome@email.com">
                 </div>
                 <div class="form-group">
                     <label for="isubject">Assunto *</label>
-                    <input type="text" name="subject" id="isubject" required placeholder="Assunto da mensagem...">
+                    <input type="text" name="subject" id="subject" required placeholder="Assunto da mensagem...">
                 </div>
                 <div class="form-group">
                     <label for="imessage">Mensagem *</label>
-                    <textarea name="imessage" id="message" required></textarea>
+                    <textarea name="message" id="message" required></textarea>
                 </div>
                 <div class="form-btn">
-                    <button type="submit">Enviar</button>
+                    <button type="submit" id="submit_button">Enviar mensagem</button>
                 </div>
             </form>
         </div>
@@ -245,6 +245,7 @@
 
 
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>

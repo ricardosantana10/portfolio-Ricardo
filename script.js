@@ -9,16 +9,29 @@
 
 emailjs.init("W3ufJ4RTBJsaXAkeE");
 
-const form = document.querySelector('#form'); 
+document.getElementById("form").addEventListener("submit", function (event) {
+    event.preventDefault();
 
-form.addEventListener('submit', function(e) {
-    e.preventDefault(); 
+    const formData = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        subject: document.getElementById("subject").value,
+        message: document.getElementById("message").value,
+    }
 
-    emailjs.sendForm('Ricardo@10', 'template_xfh6e1d', this)
+    const serviceID = "service_hknkd2t";
+    const templateID = "template_xdov22k";
+    const submitButton = document.getElementById("submit_button");
+    submitButton.textContent = "Enviando...";
+
+    emailjs.send(serviceID,templateID, formData)
         .then(() => {
-            alert('Email enviado com sucesso!');
-            form.reset();
-        }, (err) => {
-            alert('Erro ao enviar email: ' + JSON.stringify(err));
-        });
+            alert("Tudo certo!");
+        })
+        .catch((error) => {
+            console.error("Erro no envio", error);
+        })
+        .finally(() => {
+            submitButton.textContent = "Enviar mensagem"
+        })
 });
