@@ -23,15 +23,33 @@ document.getElementById("form").addEventListener("submit", function (event) {
     const templateID = "template_xdov22k";
     const submitButton = document.getElementById("submit_button");
     submitButton.textContent = "Enviando...";
+    submitButton.disabled = true;
 
     emailjs.send(serviceID,templateID, formData)
         .then(() => {
-            alert("Tudo certo!");
+            Toastify({
+                text: "Email enviado com sucesso!",
+                duration: 3000,
+                style: {
+                    background: "#28a745",
+                    color: "#f4f4f4",
+                }
+            }).showToast();
+            
+            document.getElementById("form").reset();
         })
         .catch((error) => {
-            console.error("Erro no envio", error);
+            Toastify({
+                text: "Erro ao enviar o email",
+                duration: 3000,
+                style: {
+                    background: "#dc3545",
+                    color: "#f4f4f4",
+                }
+            }).showToast();
         })
         .finally(() => {
             submitButton.textContent = "Enviar mensagem"
+            submitButton.disabled = false;
         })
 });
