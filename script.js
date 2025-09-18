@@ -49,7 +49,7 @@ document.getElementById("form").addEventListener("submit", function (event) {
             }).showToast();
         })
         .finally(() => {
-            submitButton.textContent = "Enviar mensagem"
+            submitButton.textContent = "Enviar mensagem",
             submitButton.disabled = false;
         })
 });
