@@ -29,7 +29,7 @@ document.getElementById("form").addEventListener("submit", function (event) {
         .then(() => {
             Toastify({
                 text: "Email enviado com sucesso!",
-                duration: 3000,
+                duration: 2000,
                 style: {
                     background: "#28a745",
                     color: "#f4f4f4",
