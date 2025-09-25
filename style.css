@@ -482,7 +482,7 @@ section {
   cursor: pointer;
   transition: 0.2s;
   box-shadow: 0 6px 20px rgba(0,0,0,0.4);
-  background-color: #068db3;
+  background: linear-gradient(90deg, #00c6ff, rgb(8, 130, 206));
   color: white;
 }
 
@@ -641,7 +641,7 @@ textarea {
   cursor: pointer;
   transition: 0.2s;
   box-shadow: 0 6px 20px rgba(0,0,0,0.4);
-  background-color: rgb(5, 211, 247);
+  background: linear-gradient(90deg, #00c6ff, rgb(8, 130, 206));
   color: white;
   width: 100%;
 }
