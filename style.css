@@ -100,10 +100,11 @@ section {
 }
 
 .btn button {
-  padding: 12px 20px;
+  padding: 17px 24px;
   border: none;
-  border-radius: 14px;
+  border-radius: 27px;
   font-weight: 600;
+  font-size: 1.02rem;
   cursor: pointer;
   transition: 0.2s;
   box-shadow: 0 6px 20px rgba(0,0,0,0.4);
