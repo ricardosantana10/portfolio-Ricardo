@@ -5,6 +5,10 @@
   font-family: "Inter", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: #0b0f17;
   color: #fff;
@@ -16,7 +20,6 @@ section {
   min-width: 100%;
   padding-left: 20px;
   padding-right: 20px;
-  scroll-behavior: smooth;
 }
 
 /* HOME */
@@ -102,7 +105,7 @@ section {
 .btn button {
   padding: 17px 24px;
   border: none;
-  border-radius: 27px;
+  border-radius: 20px;
   font-weight: 600;
   font-size: 1.02rem;
   cursor: pointer;
